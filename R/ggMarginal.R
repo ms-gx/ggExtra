@@ -205,8 +205,8 @@ print.ggExtraPlot <- function(x, newpage = grDevices::dev.interactive(), ...) {
   if (isTRUE(getOption("rstudio.notebook.executing"))) {
     x <- ggplot2::ggplot() +
       ggplot2::geom_blank() +
-      ggplot2::annotation_custom(x) +
-      ggplot2::theme_void()
+      ggplot2::annotation_custom(x)# +
+      #ggplot2::theme_void()
     print(x)
   } else {
     grid::grid.draw(x)
